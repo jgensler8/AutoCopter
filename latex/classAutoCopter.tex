@@ -1,0 +1,58 @@
+\hypertarget{classAutoCopter}{}\section{Auto\+Copter Class Reference}
+\label{classAutoCopter}\index{Auto\+Copter@{Auto\+Copter}}
+
+
+{\ttfamily \#include $<$Auto\+Copter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAutoCopter_a7947139ac0791cca71b69dd48fb915b4}{Auto\+Copter} (\hyperlink{classPartsList}{Parts\+List} parts\+List)
+\item 
+void \hyperlink{classAutoCopter_aac4b3c3e43e2bb72136ccc8491b9b545}{setup} ()
+\item 
+void \hyperlink{classAutoCopter_a54f2d2f24ca0323fdb12ba6e3dc7f600}{loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thin class over Autocopter.\+ino. Created solely for Doxygen ease of use. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classAutoCopter_a7947139ac0791cca71b69dd48fb915b4}{}\index{Auto\+Copter@{Auto\+Copter}!Auto\+Copter@{Auto\+Copter}}
+\index{Auto\+Copter@{Auto\+Copter}!Auto\+Copter@{Auto\+Copter}}
+\subsubsection[{Auto\+Copter(\+Parts\+List parts\+List)}]{\setlength{\rightskip}{0pt plus 5cm}Auto\+Copter\+::\+Auto\+Copter (
+\begin{DoxyParamCaption}
+\item[{{\bf Parts\+List}}]{parts\+List}
+\end{DoxyParamCaption}
+)}\label{classAutoCopter_a7947139ac0791cca71b69dd48fb915b4}
+Construct our Copter with a list of Parts 
+
+\subsection{Member Function Documentation}
+\hypertarget{classAutoCopter_a54f2d2f24ca0323fdb12ba6e3dc7f600}{}\index{Auto\+Copter@{Auto\+Copter}!loop@{loop}}
+\index{loop@{loop}!Auto\+Copter@{Auto\+Copter}}
+\subsubsection[{loop()}]{\setlength{\rightskip}{0pt plus 5cm}void Auto\+Copter\+::loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classAutoCopter_a54f2d2f24ca0323fdb12ba6e3dc7f600}
+Basic flight loop.
+\begin{DoxyEnumerate}
+\item Get a command
+\item If command -\/$>$ do it
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Else -\/$>$ Stabilize using a \hyperlink{classStabilizer}{Stabilizer} if available 
+\end{DoxyEnumerate}\hypertarget{classAutoCopter_aac4b3c3e43e2bb72136ccc8491b9b545}{}\index{Auto\+Copter@{Auto\+Copter}!setup@{setup}}
+\index{setup@{setup}!Auto\+Copter@{Auto\+Copter}}
+\subsubsection[{setup()}]{\setlength{\rightskip}{0pt plus 5cm}void Auto\+Copter\+::setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classAutoCopter_aac4b3c3e43e2bb72136ccc8491b9b545}
+Setup various parts in our Parts List. Then run some basic tests, if specified. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Main/\hyperlink{AutoCopter_8h}{Auto\+Copter.\+h}\item 
+src/\+Main/\hyperlink{AutoCopter_8cpp}{Auto\+Copter.\+cpp}\end{DoxyCompactItemize}

@@ -25,9 +25,22 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Main}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Motor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/ESC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/AccelerometerSensor}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/BarometerSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/GyroscopeSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/MagnetometerSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/BMP180}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/HMC5883L}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/MPU6050}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands/CommandInput}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands/CommandInput/Inputs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController/Stabilizer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController/Stabilizer/Stabilizers}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.384663626" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -39,9 +52,22 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Main}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Motor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/ESC}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/AccelerometerSensor}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/BarometerSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/GyroscopeSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Sensor/MagnetometerSensor}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/BMP180}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/HMC5883L}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Components/Parts/MPU6050}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands/CommandInput}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/Commands/CommandInput/Inputs}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController/Stabilizer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/AutoCopter/src/FlightController/Stabilizer/Stabilizers}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.2107147786" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>
@@ -68,4 +94,10 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/AutoCopter"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
