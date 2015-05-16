@@ -93,28 +93,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define ESC_H_</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Motor_8h.html">Motor.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classESC.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classESC.html">ESC</a> : <span class="keyword">public</span> <a class="code" href="classComponent.html">Component</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classESC.html">ESC</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classESC.html">ESC</a>(String name, <span class="keywordtype">int</span> pin, <span class="keywordtype">int</span> position, <a class="code" href="classMotor.html">Motor</a> motor);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classESC.html">ESC</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classESC.html#a4abfa0f0850c7c02c6e9c9adb405743d">updateVolatage</a>(<span class="keywordtype">float</span> voltage);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    String getLoggingInfo();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> voltage;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> pin;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> position;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classMotor.html">Motor</a> motor;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ESC_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classESC_html_a4abfa0f0850c7c02c6e9c9adb405743d"><div class="ttname"><a href="classESC.html#a4abfa0f0850c7c02c6e9c9adb405743d">ESC::updateVolatage</a></div><div class="ttdeci">void updateVolatage(float voltage)</div><div class="ttdef"><b>Definition:</b> ESC.cpp:31</div></div>
-<div class="ttc" id="classESC_html"><div class="ttname"><a href="classESC.html">ESC</a></div><div class="ttdef"><b>Definition:</b> ESC.h:19</div></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classESC.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classESC.html">ESC</a> : <span class="keyword">public</span> <a class="code" href="classComponent.html">Component</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classESC.html">ESC</a>( <span class="keyword">const</span> <a class="code" href="classESC.html">ESC</a>&amp; other );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classESC.html">ESC</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;pin, <span class="keyword">const</span> <span class="keywordtype">int</span> &amp;position, <span class="keyword">const</span> <a class="code" href="classMotor.html">Motor</a> &amp;motor);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classESC.html">ESC</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classESC.html#abe83b1fc646f0b1bd77d50b215d668d7">validate</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;expectedPosition);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classESC.html#a580839cc20de6686c6d249666a196654">updateVoltage</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;voltage, Servo servo);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classESC.html#a6b32c823658b831664e1c73975adbc22">testMotor</a>(Servo servo);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> setup(Servo servo);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> pin;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> position;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classMotor.html">Motor</a> motor;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">float</span> voltage;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* ESC_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classESC_html"><div class="ttname"><a href="classESC.html">ESC</a></div><div class="ttdef"><b>Definition:</b> ESC.h:20</div></div>
 <div class="ttc" id="Motor_8h_html"><div class="ttname"><a href="Motor_8h.html">Motor.h</a></div></div>
+<div class="ttc" id="classESC_html_abe83b1fc646f0b1bd77d50b215d668d7"><div class="ttname"><a href="classESC.html#abe83b1fc646f0b1bd77d50b215d668d7">ESC::validate</a></div><div class="ttdeci">bool validate(const int &amp;expectedPosition)</div><div class="ttdef"><b>Definition:</b> ESC.cpp:31</div></div>
 <div class="ttc" id="classComponent_html"><div class="ttname"><a href="classComponent.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:17</div></div>
 <div class="ttc" id="classMotor_html"><div class="ttname"><a href="classMotor.html">Motor</a></div><div class="ttdef"><b>Definition:</b> Motor.h:14</div></div>
+<div class="ttc" id="classESC_html_a580839cc20de6686c6d249666a196654"><div class="ttname"><a href="classESC.html#a580839cc20de6686c6d249666a196654">ESC::updateVoltage</a></div><div class="ttdeci">void updateVoltage(const int &amp;voltage, Servo servo)</div><div class="ttdef"><b>Definition:</b> ESC.cpp:39</div></div>
+<div class="ttc" id="classESC_html_a6b32c823658b831664e1c73975adbc22"><div class="ttname"><a href="classESC.html#a6b32c823658b831664e1c73975adbc22">ESC::testMotor</a></div><div class="ttdeci">void testMotor(Servo servo)</div><div class="ttdef"><b>Definition:</b> ESC.cpp:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -18,10 +18,8 @@
  */
 class Sensor: public Component {
 public:
-	Sensor(String name);
+	Sensor();
 	virtual ~Sensor();
-
-	String getLoggingInfo();
 
 	virtual void updateReadings();
 };

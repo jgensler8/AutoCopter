@@ -11,7 +11,7 @@
 /**
  * Construct a new BarometricSensor with the given name.
  */
-BarometricSensor::BarometricSensor(String name) : Sensor(name) {
+BarometricSensor::BarometricSensor() : Sensor() {
 	this->pressure = -1;
 }
 
@@ -20,13 +20,6 @@ BarometricSensor::BarometricSensor(String name) : Sensor(name) {
  */
 BarometricSensor::~BarometricSensor() {
 
-}
-
-/**
- * Return a non-newline ended string containing information about the BarometricSensor
- */
-String BarometricSensor::getLoggingInfo() {
-	return Sensor::getLoggingInfo() + "BarometricSensor:Pressure:" + this->pressure + ";";
 }
 
 /**

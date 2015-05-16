@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <Parts/MPU6050/MPU6050.h>
+#include "MPU6050.h"
 
-MPU6050::MPU6050() : AccelerometerSensor("MPU6050") , GyroscopeSensor("MPU6050") {
-	// TODO Auto-generated constructor stub
+MPU6050::MPU6050() : AccelerometerSensor() , GyroscopeSensor() {
 
 }
 
 MPU6050::~MPU6050() {
-	// TODO Auto-generated destructor stub
+
 }
 

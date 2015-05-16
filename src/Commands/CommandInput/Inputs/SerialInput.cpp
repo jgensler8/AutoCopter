@@ -5,7 +5,7 @@
  *      Author: user
  */
 
-#include <SerialInput.h>
+#include "SerialInput.h"
 
 SerialInput::SerialInput(int baudRate) : CommandInput() {
 	this->baudRate = baudRate;

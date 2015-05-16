@@ -13,7 +13,7 @@
 
 class GyroscopeSensor : public Sensor {
 public:
-	GyroscopeSensor(String name);
+	GyroscopeSensor();
 	virtual ~GyroscopeSensor();
 };
 

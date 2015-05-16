@@ -13,7 +13,7 @@
 
 class AccelerometerSensor : public Sensor {
 public:
-	AccelerometerSensor(String name);
+	AccelerometerSensor();
 	virtual ~AccelerometerSensor();
 };
 

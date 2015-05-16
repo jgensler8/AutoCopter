@@ -10,6 +10,7 @@
 #define ESC_H_
 
 #include "Motor.h"
+#include <Servo.h>
 
 /**
  * ESC set voltage going to the motors. Basically, control where we are going.
@@ -18,17 +19,19 @@
  */
 class ESC : public Component {
 public:
-	ESC();
-	ESC(String name, int pin, int position, Motor motor);
+	ESC( const ESC& other );
+	ESC( const int &pin, const int &position, const Motor &motor);
 	virtual ~ESC();
 
-	void updateVolatage(float voltage);
-	String getLoggingInfo();
+	bool validate(const int &expectedPosition);
+	void updateVoltage(const int &voltage, Servo servo);
+	void testMotor(Servo servo);
+	void setup(Servo servo);
 private:
-	float voltage;
 	int pin;
 	int position;
 	Motor motor;
+	float voltage;
 };
 
 #endif /* ESC_H_ */

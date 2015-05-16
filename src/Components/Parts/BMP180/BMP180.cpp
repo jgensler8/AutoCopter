@@ -11,7 +11,7 @@
 /**
  * Construct a new BMP180
  */
-BMP180::BMP180() : BarometricSensor("BMP180") {
+BMP180::BMP180() : BarometricSensor() {
 
 }
 
@@ -20,13 +20,6 @@ BMP180::BMP180() : BarometricSensor("BMP180") {
  */
 BMP180::~BMP180() {
 
-}
-
-/**
- * Return a non-newline ended string containing information about the Component
- */
-String BMP180::getLoggingInfo() {
-	return BarometricSensor::getLoggingInfo() + "BMP180;";
 }
 
 /**

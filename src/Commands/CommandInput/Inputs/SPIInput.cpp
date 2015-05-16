@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <Commands/CommandInput/Inputs/SPIInput.h>
+#include "SPIInput.h"
 
 SPIInput::SPIInput() : CommandInput() {
-	// TODO Auto-generated constructor stub
 
 }
 
 SPIInput::~SPIInput() {
-	// TODO Auto-generated destructor stub
+
 }
 

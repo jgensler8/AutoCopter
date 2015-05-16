@@ -9,10 +9,17 @@
 #include "Component.h"
 
 /**
+ * Copy over name from another Component
+ */
+Component::Component(const Component& other) {
+
+}
+
+/**
  * Construct a new Component with the given name.
  */
-Component::Component(String name) {
-	this->name = name;
+Component::Component() {
+
 }
 
 /**
@@ -21,11 +28,3 @@ Component::Component(String name) {
 Component::~Component() {
 
 }
-
-/**
- * Return a non-newline ended string containing information about the Component
- */
-String Component::getLoggingInfo() {
-	return "Component:" + this->name + ";";
-}
-

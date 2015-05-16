@@ -9,10 +9,11 @@
 #include "AutoCopter.h"
 
 /**
- * Construct our Copter with a list of Parts
+ * Construct our Copter with a list of Parts and FlightController
  */
-AutoCopter::AutoCopter(PartsList partsList) {
-	this->partsList = partsList;
+AutoCopter::AutoCopter(const PartsList &partsList, const FlightController &flightController) :
+	partsList(partsList), flightController(flightController) {
+
 }
 
 AutoCopter::~AutoCopter() {
@@ -25,14 +26,10 @@ AutoCopter::~AutoCopter() {
  * Setup various parts in our Parts List. Then run some basic tests, if specified.
  */
 void AutoCopter::setup() {
-	//TODO: Shallow copy of WString
-	Serial.begin(9600);
-	Serial.println(this->partsList.getLoggingInfo());
-
-	// Setup ESC ?
-
-	// Run Motor Test ?
-
+	// Setup ESC
+	this->partsList.escConfig.setupESCs();
+	// Run Motor Test
+	this->partsList.escConfig.testMotors();
 	// Setup Other items on parts list
 }
 
@@ -44,9 +41,12 @@ void AutoCopter::setup() {
  */
 void AutoCopter::loop() {
 	// Get command from command input
+	if(this->partsList.commandInput.hasNextCommand()) {
 
-	// If command, do it
-
-	// otherwise, stay stable and give control to the adjuster
+	}
+	else {
+		Serial.println("STABILIZING");
+		this->flightController.stabilize(this->partsList);
+	}
 }
 

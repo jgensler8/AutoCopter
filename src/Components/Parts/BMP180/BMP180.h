@@ -19,8 +19,6 @@ public:
 	BMP180();
 	virtual ~BMP180();
 
-	String getLoggingInfo();
-
 	void updateReadings();
 };
 

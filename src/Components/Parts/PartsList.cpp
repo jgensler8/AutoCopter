@@ -8,22 +8,20 @@
 
 #include "PartsList.h"
 
-PartsList::PartsList() {
-
-}
-
 PartsList::PartsList(
-		CommandInput commandInput,
-		ESCConfig escConfig
-		) {
-	this->commandInput = commandInput;
-	this->escConfig = escConfig;
+		const CommandInput &commandInput,
+		const ESCConfig &escConfig,
+		const AccelerometerSensor &accelerometerSensor,
+		const GyroscopeSensor &gyroscopeSensor,
+		const MagnetometerSensor &magnetometerSensor
+		) : commandInput(commandInput),
+		escConfig(escConfig),
+		accelerometerSensor(accelerometerSensor),
+		gyroscopeSensor(gyroscopeSensor),
+		magnetometerSensor(magnetometerSensor){
+
 }
 
 PartsList::~PartsList() {
 
-}
-
-String PartsList::getLoggingInfo() {
-	return "PartsList:" + this->escConfig.getLoggingInfo();
 }

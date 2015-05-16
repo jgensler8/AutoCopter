@@ -13,7 +13,7 @@
 
 class MagnetometerSensor : public Sensor {
 public:
-	MagnetometerSensor(String name);
+	MagnetometerSensor();
 	virtual ~MagnetometerSensor();
 };
 

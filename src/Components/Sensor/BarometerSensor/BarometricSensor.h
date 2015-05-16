@@ -17,12 +17,10 @@
  */
 class BarometricSensor: public Sensor {
 public:
-	BarometricSensor(String name);
+	BarometricSensor();
 	virtual ~BarometricSensor();
 
-	String getLoggingInfo();
-
-	virtual void updateReadings();
+	void updateReadings();
 	float getPressure();
 private:
 	float pressure;

@@ -13,11 +13,9 @@
 
 class Motor : public Component {
 public:
+	Motor(const Motor& motor);
 	Motor();
-	Motor(String name);
 	virtual ~Motor();
-
-	String getLoggingInfo();
 };
 
 #endif /* MOTOR_H_ */

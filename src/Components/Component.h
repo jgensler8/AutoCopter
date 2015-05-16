@@ -9,19 +9,16 @@
 #ifndef COMPONENT_H_
 #define COMPONENT_H_
 
-#include <WString.h>
+#include <Arduino.h>
 
 /**
- * This virtual class represents every physical device used on the MultiCopter.
+ * This class represents every physical device used on the MultiCopter.
  */
 class Component {
 public:
-	Component(String name);
+	Component(const Component& other);
+	Component();
 	virtual ~Component();
-
-	String getLoggingInfo();
-private:
-	String name;
 };
 
 #endif /* COMPONENT_H_ */

@@ -8,17 +8,16 @@
 
 #include "ESC.h"
 
-ESC::ESC() : Component("default ESC") {
-	this->pin = 0;
-	this->position = 0;
-	this->voltage = 0;
+ESC::ESC( const ESC& other ) : Component(other), pin(other.pin), position(other.position),
+	motor(other.motor), voltage(other.voltage) {
+	//TODO: might need attach here
 }
 
-ESC::ESC(String name, int pin, int position, Motor motor) : Component(name) {
-	this->pin = pin;
-	this->position = position;
+ESC::ESC( const int &pin, const int &position, const Motor &motor) :
+	Component(), pin(pin), position(position), motor(motor) {
 	this->voltage = 0;
-	this->motor = motor;
+	//Servo::attach(this->pin);
+	//this->updateVoltage(0);
 }
 
 ESC::~ESC() {
@@ -26,17 +25,37 @@ ESC::~ESC() {
 }
 
 /**
- * Updates the volatage for the ESC
+ * Check if our position is the expected position
+ * @param expectedPosition: the position to check against
  */
-void ESC::updateVolatage(float voltage) {
-	this->voltage = voltage;
+bool ESC::validate(const int &expectedPosition) {
+	return this->position == expectedPosition;
+}
 
-	//TODO: add some digital write to servo using pin
+/**
+ * Updates the voltage for the ESC.
+ * @param voltage: Any number, though between 0 and 180 are better.
+ */
+void ESC::updateVoltage(const int &voltage, Servo servo) {
+	this->voltage = voltage;
+	servo.write(this->voltage);
+	Serial.println(this->position);
+	Serial.println(servo.attached());
+	Serial.println(servo.read());
+}
+
+/**
+ * Spin each motor at ~20% power for 1 second
+ */
+void ESC::testMotor(Servo servo) {
+	this->updateVoltage(36, servo);
+	delay(1000);
+	this->updateVoltage(0, servo);
 }
 
 /**
  *
  */
-String ESC::getLoggingInfo() {
-	return Component::getLoggingInfo() + "ESC:Voltage:" + this->voltage + ";" + this->motor.getLoggingInfo();
+void ESC::setup(Servo servo) {
+	Serial.println(servo.attach(this->pin));
 }

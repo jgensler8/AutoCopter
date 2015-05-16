@@ -11,16 +11,12 @@
 /**
  * Construct a new Sensor with the given name.
  */
-Sensor::Sensor(String name) : Component(name) {
+Sensor::Sensor() : Component() {
 
 }
 
 Sensor::~Sensor() {
-	// TODO Auto-generated destructor stub
-}
 
-String Sensor::getLoggingInfo() {
-	return Component::getLoggingInfo() + "Sensor;";
 }
 
 void Sensor::updateReadings() {

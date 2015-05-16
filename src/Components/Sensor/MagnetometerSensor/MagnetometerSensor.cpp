@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <MagnetometerSensor/MagnetometerSensor.h>
+#include "MagnetometerSensor.h"
 
-MagnetometerSensor::MagnetometerSensor(String name) : Sensor(name) {
-	// TODO Auto-generated constructor stub
+MagnetometerSensor::MagnetometerSensor() : Sensor() {
 
 }
 
 MagnetometerSensor::~MagnetometerSensor() {
-	// TODO Auto-generated destructor stub
+
 }
 

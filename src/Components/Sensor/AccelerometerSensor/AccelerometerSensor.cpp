@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <AccelerometerSensor/AccelerometerSensor.h>
+#include "AccelerometerSensor.h"
 
-AccelerometerSensor::AccelerometerSensor(String name) : Sensor(name) {
-	// TODO Auto-generated constructor stub
+AccelerometerSensor::AccelerometerSensor() : Sensor() {
 
 }
 
 AccelerometerSensor::~AccelerometerSensor() {
-	// TODO Auto-generated destructor stub
+
 }
 

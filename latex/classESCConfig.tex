@@ -1,18 +1,69 @@
 \hypertarget{classESCConfig}{}\section{E\+S\+C\+Config Class Reference}
 \label{classESCConfig}\index{E\+S\+C\+Config@{E\+S\+C\+Config}}
+
+
+{\ttfamily \#include $<$E\+S\+C\+Config.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classESCConfig_a4fa17d962c059d2ea3fc3505893acbe1}{}{\bfseries E\+S\+C\+Config} (E\+S\+C\+L\+A\+Y\+O\+U\+T layout, \hyperlink{classESC}{E\+S\+C} e1, \hyperlink{classESC}{E\+S\+C} e2, \hyperlink{classESC}{E\+S\+C} e3, \hyperlink{classESC}{E\+S\+C} e4, \hyperlink{classESC}{E\+S\+C} e5, \hyperlink{classESC}{E\+S\+C} e6, \hyperlink{classESC}{E\+S\+C} e7, \hyperlink{classESC}{E\+S\+C} e8)\label{classESCConfig_a4fa17d962c059d2ea3fc3505893acbe1}
+\hypertarget{classESCConfig_a051e5887d427d0af841b350a3d17ed0b}{}{\bfseries E\+S\+C\+Config} (const \hyperlink{classESCConfig}{E\+S\+C\+Config} \&other)\label{classESCConfig_a051e5887d427d0af841b350a3d17ed0b}
 
 \item 
-\hypertarget{classESCConfig_a4224f98b7b7b376cbb9623443a7759a5}{}bool {\bfseries validate\+Layout} ()\label{classESCConfig_a4224f98b7b7b376cbb9623443a7759a5}
+\hypertarget{classESCConfig_ae99857939f404c71e164fdbf33088fd7}{}{\bfseries E\+S\+C\+Config} (const \hyperlink{ESCConfig_8h_a5e548692e60a92e800ad2e715a9f2303}{E\+S\+C\+L\+A\+Y\+O\+U\+T} \&layout, const \hyperlink{classESC}{E\+S\+C} \&e1, const \hyperlink{classESC}{E\+S\+C} \&e2, const \hyperlink{classESC}{E\+S\+C} \&e3, const \hyperlink{classESC}{E\+S\+C} \&e4, const \hyperlink{classESC}{E\+S\+C} \&e5, const \hyperlink{classESC}{E\+S\+C} \&e6, const \hyperlink{classESC}{E\+S\+C} \&e7, const \hyperlink{classESC}{E\+S\+C} \&e8)\label{classESCConfig_ae99857939f404c71e164fdbf33088fd7}
 
 \item 
-\hypertarget{classESCConfig_a79c10721918440e631cca0fc754402ad}{}String {\bfseries get\+Logging\+Info} ()\label{classESCConfig_a79c10721918440e631cca0fc754402ad}
-
+bool \hyperlink{classESCConfig_a4224f98b7b7b376cbb9623443a7759a5}{validate\+Layout} ()
+\item 
+bool \hyperlink{classESCConfig_a8c62f46613d4de2fb8ec0d086640a2c0}{setup\+E\+S\+Cs} ()
+\item 
+void \hyperlink{classESCConfig_af252e16ddc1298fdaf80731b5ac7a783}{update\+Voltage} (const int \&position, const int \&voltage)
+\item 
+void \hyperlink{classESCConfig_aacf261c1a05951b8dee6394e81af41a9}{test\+Motors} ()
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Holds a generic configuration of \hyperlink{classESC}{E\+S\+C}\textquotesingle{}s 
+
+\subsection{Member Function Documentation}
+\hypertarget{classESCConfig_a8c62f46613d4de2fb8ec0d086640a2c0}{}\index{E\+S\+C\+Config@{E\+S\+C\+Config}!setup\+E\+S\+Cs@{setup\+E\+S\+Cs}}
+\index{setup\+E\+S\+Cs@{setup\+E\+S\+Cs}!E\+S\+C\+Config@{E\+S\+C\+Config}}
+\subsubsection[{setup\+E\+S\+Cs()}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+S\+C\+Config\+::setup\+E\+S\+Cs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classESCConfig_a8c62f46613d4de2fb8ec0d086640a2c0}
+This function would arm the \hyperlink{classESC}{E\+S\+C} if needed. I believe this is setting the \hyperlink{classESC}{E\+S\+C} to max before powering it on. \hypertarget{classESCConfig_aacf261c1a05951b8dee6394e81af41a9}{}\index{E\+S\+C\+Config@{E\+S\+C\+Config}!test\+Motors@{test\+Motors}}
+\index{test\+Motors@{test\+Motors}!E\+S\+C\+Config@{E\+S\+C\+Config}}
+\subsubsection[{test\+Motors()}]{\setlength{\rightskip}{0pt plus 5cm}void E\+S\+C\+Config\+::test\+Motors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classESCConfig_aacf261c1a05951b8dee6394e81af41a9}
+Spinning each motor in order of position. See \hyperlink{classESC_a6b32c823658b831664e1c73975adbc22}{E\+S\+C\+::test\+Motor} for more detail. \hypertarget{classESCConfig_af252e16ddc1298fdaf80731b5ac7a783}{}\index{E\+S\+C\+Config@{E\+S\+C\+Config}!update\+Voltage@{update\+Voltage}}
+\index{update\+Voltage@{update\+Voltage}!E\+S\+C\+Config@{E\+S\+C\+Config}}
+\subsubsection[{update\+Voltage(const int \&position, const int \&voltage)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+S\+C\+Config\+::update\+Voltage (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{position, }
+\item[{const int \&}]{voltage}
+\end{DoxyParamCaption}
+)}\label{classESCConfig_af252e16ddc1298fdaf80731b5ac7a783}
+Update a given position to a given voltage. 
+\begin{DoxyParams}{Parameters}
+{\em position} & motor position (1 to 8 at the moment) \\
+\hline
+{\em voltage} & see \hyperlink{classESC_a580839cc20de6686c6d249666a196654}{E\+S\+C\+::update\+Voltage} for more detail \\
+\hline
+\end{DoxyParams}
+\hypertarget{classESCConfig_a4224f98b7b7b376cbb9623443a7759a5}{}\index{E\+S\+C\+Config@{E\+S\+C\+Config}!validate\+Layout@{validate\+Layout}}
+\index{validate\+Layout@{validate\+Layout}!E\+S\+C\+Config@{E\+S\+C\+Config}}
+\subsubsection[{validate\+Layout()}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+S\+C\+Config\+::validate\+Layout (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classESCConfig_a4224f98b7b7b376cbb9623443a7759a5}
+Check that all relevant escs are in their correct pin position 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

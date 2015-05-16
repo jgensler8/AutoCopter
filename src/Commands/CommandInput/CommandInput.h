@@ -20,6 +20,7 @@ public:
 	virtual ~CommandInput();
 
 	virtual Command getNextCommand();
+	virtual bool hasNextCommand();
 };
 
 #endif /* COMMANDINPUT_H_ */

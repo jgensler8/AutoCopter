@@ -89,19 +89,110 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ESCConfig Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ESCConfig_8h_source.html">ESCConfig.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4fa17d962c059d2ea3fc3505893acbe1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fa17d962c059d2ea3fc3505893acbe1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ESCConfig</b> (ESCLAYOUT layout, <a class="el" href="classESC.html">ESC</a> e1, <a class="el" href="classESC.html">ESC</a> e2, <a class="el" href="classESC.html">ESC</a> e3, <a class="el" href="classESC.html">ESC</a> e4, <a class="el" href="classESC.html">ESC</a> e5, <a class="el" href="classESC.html">ESC</a> e6, <a class="el" href="classESC.html">ESC</a> e7, <a class="el" href="classESC.html">ESC</a> e8)</td></tr>
-<tr class="separator:a4fa17d962c059d2ea3fc3505893acbe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4224f98b7b7b376cbb9623443a7759a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4224f98b7b7b376cbb9623443a7759a5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>validateLayout</b> ()</td></tr>
+<tr class="memitem:a051e5887d427d0af841b350a3d17ed0b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a051e5887d427d0af841b350a3d17ed0b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ESCConfig</b> (const <a class="el" href="classESCConfig.html">ESCConfig</a> &amp;other)</td></tr>
+<tr class="separator:a051e5887d427d0af841b350a3d17ed0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae99857939f404c71e164fdbf33088fd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae99857939f404c71e164fdbf33088fd7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ESCConfig</b> (const <a class="el" href="ESCConfig_8h.html#a5e548692e60a92e800ad2e715a9f2303">ESCLAYOUT</a> &amp;layout, const <a class="el" href="classESC.html">ESC</a> &amp;e1, const <a class="el" href="classESC.html">ESC</a> &amp;e2, const <a class="el" href="classESC.html">ESC</a> &amp;e3, const <a class="el" href="classESC.html">ESC</a> &amp;e4, const <a class="el" href="classESC.html">ESC</a> &amp;e5, const <a class="el" href="classESC.html">ESC</a> &amp;e6, const <a class="el" href="classESC.html">ESC</a> &amp;e7, const <a class="el" href="classESC.html">ESC</a> &amp;e8)</td></tr>
+<tr class="separator:ae99857939f404c71e164fdbf33088fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4224f98b7b7b376cbb9623443a7759a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classESCConfig.html#a4224f98b7b7b376cbb9623443a7759a5">validateLayout</a> ()</td></tr>
 <tr class="separator:a4224f98b7b7b376cbb9623443a7759a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79c10721918440e631cca0fc754402ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79c10721918440e631cca0fc754402ad"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><b>getLoggingInfo</b> ()</td></tr>
-<tr class="separator:a79c10721918440e631cca0fc754402ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c62f46613d4de2fb8ec0d086640a2c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classESCConfig.html#a8c62f46613d4de2fb8ec0d086640a2c0">setupESCs</a> ()</td></tr>
+<tr class="separator:a8c62f46613d4de2fb8ec0d086640a2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af252e16ddc1298fdaf80731b5ac7a783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classESCConfig.html#af252e16ddc1298fdaf80731b5ac7a783">updateVoltage</a> (const int &amp;position, const int &amp;voltage)</td></tr>
+<tr class="separator:af252e16ddc1298fdaf80731b5ac7a783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf261c1a05951b8dee6394e81af41a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classESCConfig.html#aacf261c1a05951b8dee6394e81af41a9">testMotors</a> ()</td></tr>
+<tr class="separator:aacf261c1a05951b8dee6394e81af41a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Holds a generic configuration of <a class="el" href="classESC.html">ESC</a>'s </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8c62f46613d4de2fb8ec0d086640a2c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ESCConfig::setupESCs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function would arm the <a class="el" href="classESC.html">ESC</a> if needed. I believe this is setting the <a class="el" href="classESC.html">ESC</a> to max before powering it on. </p>
+
+</div>
+</div>
+<a class="anchor" id="aacf261c1a05951b8dee6394e81af41a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ESCConfig::testMotors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Spinning each motor in order of position. See <a class="el" href="classESC.html#a6b32c823658b831664e1c73975adbc22">ESC::testMotor</a> for more detail. </p>
+
+</div>
+</div>
+<a class="anchor" id="af252e16ddc1298fdaf80731b5ac7a783"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ESCConfig::updateVoltage </td>
+          <td>(</td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>voltage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Update a given position to a given voltage. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>motor position (1 to 8 at the moment) </td></tr>
+    <tr><td class="paramname">voltage</td><td>see <a class="el" href="classESC.html#a580839cc20de6686c6d249666a196654">ESC::updateVoltage</a> for more detail </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4224f98b7b7b376cbb9623443a7759a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ESCConfig::validateLayout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check that all relevant escs are in their correct pin position </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Components/ESC/<a class="el" href="ESCConfig_8h_source.html">ESCConfig.h</a></li>
 <li>src/Components/ESC/<a class="el" href="ESCConfig_8cpp.html">ESCConfig.cpp</a></li>

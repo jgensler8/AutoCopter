@@ -9,20 +9,19 @@
 #include <Motor/Motor.h>
 
 /**
- * Construct a motor with the given name
+ * Create a Motor from another Motor
  */
-Motor::Motor(String name) : Component(name) {
+Motor::Motor(const Motor& motor) : Component(motor) {
 
 }
 
-Motor::Motor() : Component("default motor") {
+/**
+ * Construct a motor with the given name
+ */
+Motor::Motor() : Component() {
 
 }
 
 Motor::~Motor() {
 
-}
-
-String Motor::getLoggingInfo() {
-	return Component::getLoggingInfo();
 }

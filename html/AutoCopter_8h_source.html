@@ -93,25 +93,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define AUTOCOPTER_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PartsList_8h.html">PartsList.h</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classAutoCopter.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAutoCopter.html">AutoCopter</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classAutoCopter.html#a7947139ac0791cca71b69dd48fb915b4">AutoCopter</a>(<a class="code" href="classPartsList.html">PartsList</a> partsList);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAutoCopter.html">AutoCopter</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAutoCopter.html#aac4b3c3e43e2bb72136ccc8491b9b545">setup</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAutoCopter.html#a54f2d2f24ca0323fdb12ba6e3dc7f600">loop</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classPartsList.html">PartsList</a> partsList;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AUTOCOPTER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="FlightController_8h.html">FlightController.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classAutoCopter.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAutoCopter.html">AutoCopter</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classAutoCopter.html#a527ad0ed7b5e4c3b9bb0d748638064ef">AutoCopter</a>(<span class="keyword">const</span> <a class="code" href="classPartsList.html">PartsList</a> &amp;partsList, <span class="keyword">const</span> <a class="code" href="classFlightController.html">FlightController</a> &amp;flightController);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="classAutoCopter.html">AutoCopter</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAutoCopter.html#aac4b3c3e43e2bb72136ccc8491b9b545">setup</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classAutoCopter.html#a54f2d2f24ca0323fdb12ba6e3dc7f600">loop</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classPartsList.html">PartsList</a> partsList;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classFlightController.html">FlightController</a> flightController;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* AUTOCOPTER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="FlightController_8h_html"><div class="ttname"><a href="FlightController_8h.html">FlightController.h</a></div></div>
 <div class="ttc" id="PartsList_8h_html"><div class="ttname"><a href="PartsList_8h.html">PartsList.h</a></div></div>
-<div class="ttc" id="classAutoCopter_html"><div class="ttname"><a href="classAutoCopter.html">AutoCopter</a></div><div class="ttdef"><b>Definition:</b> AutoCopter.h:16</div></div>
-<div class="ttc" id="classPartsList_html"><div class="ttname"><a href="classPartsList.html">PartsList</a></div><div class="ttdef"><b>Definition:</b> PartsList.h:18</div></div>
-<div class="ttc" id="classAutoCopter_html_a7947139ac0791cca71b69dd48fb915b4"><div class="ttname"><a href="classAutoCopter.html#a7947139ac0791cca71b69dd48fb915b4">AutoCopter::AutoCopter</a></div><div class="ttdeci">AutoCopter(PartsList partsList)</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:14</div></div>
-<div class="ttc" id="classAutoCopter_html_aac4b3c3e43e2bb72136ccc8491b9b545"><div class="ttname"><a href="classAutoCopter.html#aac4b3c3e43e2bb72136ccc8491b9b545">AutoCopter::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:27</div></div>
-<div class="ttc" id="classAutoCopter_html_a54f2d2f24ca0323fdb12ba6e3dc7f600"><div class="ttname"><a href="classAutoCopter.html#a54f2d2f24ca0323fdb12ba6e3dc7f600">AutoCopter::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:45</div></div>
+<div class="ttc" id="classAutoCopter_html"><div class="ttname"><a href="classAutoCopter.html">AutoCopter</a></div><div class="ttdef"><b>Definition:</b> AutoCopter.h:17</div></div>
+<div class="ttc" id="classPartsList_html"><div class="ttname"><a href="classPartsList.html">PartsList</a></div><div class="ttdef"><b>Definition:</b> PartsList.h:21</div></div>
+<div class="ttc" id="classAutoCopter_html_a527ad0ed7b5e4c3b9bb0d748638064ef"><div class="ttname"><a href="classAutoCopter.html#a527ad0ed7b5e4c3b9bb0d748638064ef">AutoCopter::AutoCopter</a></div><div class="ttdeci">AutoCopter(const PartsList &amp;partsList, const FlightController &amp;flightController)</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:14</div></div>
+<div class="ttc" id="classAutoCopter_html_aac4b3c3e43e2bb72136ccc8491b9b545"><div class="ttname"><a href="classAutoCopter.html#aac4b3c3e43e2bb72136ccc8491b9b545">AutoCopter::setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:28</div></div>
+<div class="ttc" id="classAutoCopter_html_a54f2d2f24ca0323fdb12ba6e3dc7f600"><div class="ttname"><a href="classAutoCopter.html#a54f2d2f24ca0323fdb12ba6e3dc7f600">AutoCopter::loop</a></div><div class="ttdeci">void loop()</div><div class="ttdef"><b>Definition:</b> AutoCopter.cpp:42</div></div>
+<div class="ttc" id="classFlightController_html"><div class="ttname"><a href="classFlightController.html">FlightController</a></div><div class="ttdef"><b>Definition:</b> FlightController.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

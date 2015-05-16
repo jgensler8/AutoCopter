@@ -6,7 +6,7 @@
  *      Author: user
  */
 
-#include <Commands/CommandInput/CommandInput.h>
+#include "CommandInput.h"
 
 CommandInput::CommandInput() {
 
@@ -18,4 +18,8 @@ CommandInput::~CommandInput() {
 
 Command CommandInput::getNextCommand() {
 	return Command(NONE,0);
+}
+
+bool CommandInput::hasNextCommand() {
+	return false;
 }

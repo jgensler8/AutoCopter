@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <Parts/HMC5883L/HMC5883L.h>
+#include "HMC5883L.h"
 
-HMC5883L::HMC5883L() : MagnetometerSensor("HMC588L") {
-	// TODO Auto-generated constructor stub
+HMC5883L::HMC5883L() : MagnetometerSensor() {
 
 }
 
 HMC5883L::~HMC5883L() {
-	// TODO Auto-generated destructor stub
+
 }
 

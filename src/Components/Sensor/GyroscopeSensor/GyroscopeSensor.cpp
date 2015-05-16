@@ -6,14 +6,13 @@
  *      Author: user
  */
 
-#include <GyroscopeSensor/GyroscopeSensor.h>
+#include "GyroscopeSensor.h"
 
-GyroscopeSensor::GyroscopeSensor(String name) : Sensor(name){
-	// TODO Auto-generated constructor stub
+GyroscopeSensor::GyroscopeSensor() : Sensor(){
 
 }
 
 GyroscopeSensor::~GyroscopeSensor() {
-	// TODO Auto-generated destructor stub
+
 }
 

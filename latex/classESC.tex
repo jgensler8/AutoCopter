@@ -13,12 +13,19 @@ Inheritance diagram for E\+S\+C\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classESC_a4254d339c64e305cb62ca42c6e439b9d}{}{\bfseries E\+S\+C} (String name, int pin, int position, \hyperlink{classMotor}{Motor} motor)\label{classESC_a4254d339c64e305cb62ca42c6e439b9d}
+\hypertarget{classESC_a7ae93948d946f9caec8387fa85bc3151}{}{\bfseries E\+S\+C} (const \hyperlink{classESC}{E\+S\+C} \&other)\label{classESC_a7ae93948d946f9caec8387fa85bc3151}
 
 \item 
-void \hyperlink{classESC_a4abfa0f0850c7c02c6e9c9adb405743d}{update\+Volatage} (float voltage)
+\hypertarget{classESC_a81e60257cfab0a0ca108da5488ac682e}{}{\bfseries E\+S\+C} (const int \&pin, const int \&position, const \hyperlink{classMotor}{Motor} \&motor)\label{classESC_a81e60257cfab0a0ca108da5488ac682e}
+
 \item 
-\hypertarget{classESC_abdc82845ef1b09b94a89eba26610a8ff}{}String {\bfseries get\+Logging\+Info} ()\label{classESC_abdc82845ef1b09b94a89eba26610a8ff}
+bool \hyperlink{classESC_abe83b1fc646f0b1bd77d50b215d668d7}{validate} (const int \&expected\+Position)
+\item 
+void \hyperlink{classESC_a580839cc20de6686c6d249666a196654}{update\+Voltage} (const int \&voltage, Servo servo)
+\item 
+void \hyperlink{classESC_a6b32c823658b831664e1c73975adbc22}{test\+Motor} (Servo servo)
+\item 
+\hypertarget{classESC_a96ba41d5c6722e4544715e1871f19bc4}{}void {\bfseries setup} (Servo servo)\label{classESC_a96ba41d5c6722e4544715e1871f19bc4}
 
 \end{DoxyCompactItemize}
 
@@ -34,14 +41,39 @@ void \hyperlink{classESC_a4abfa0f0850c7c02c6e9c9adb405743d}{update\+Volatage} (f
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classESC_a4abfa0f0850c7c02c6e9c9adb405743d}{}\index{E\+S\+C@{E\+S\+C}!update\+Volatage@{update\+Volatage}}
-\index{update\+Volatage@{update\+Volatage}!E\+S\+C@{E\+S\+C}}
-\subsubsection[{update\+Volatage(float voltage)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+S\+C\+::update\+Volatage (
+\hypertarget{classESC_a6b32c823658b831664e1c73975adbc22}{}\index{E\+S\+C@{E\+S\+C}!test\+Motor@{test\+Motor}}
+\index{test\+Motor@{test\+Motor}!E\+S\+C@{E\+S\+C}}
+\subsubsection[{test\+Motor(\+Servo servo)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+S\+C\+::test\+Motor (
 \begin{DoxyParamCaption}
-\item[{float}]{voltage}
+\item[{Servo}]{servo}
 \end{DoxyParamCaption}
-)}\label{classESC_a4abfa0f0850c7c02c6e9c9adb405743d}
-Updates the volatage for the \hyperlink{classESC}{E\+S\+C} 
+)}\label{classESC_a6b32c823658b831664e1c73975adbc22}
+Spin each motor at $\sim$20\% power for 1 second \hypertarget{classESC_a580839cc20de6686c6d249666a196654}{}\index{E\+S\+C@{E\+S\+C}!update\+Voltage@{update\+Voltage}}
+\index{update\+Voltage@{update\+Voltage}!E\+S\+C@{E\+S\+C}}
+\subsubsection[{update\+Voltage(const int \&voltage, Servo servo)}]{\setlength{\rightskip}{0pt plus 5cm}void E\+S\+C\+::update\+Voltage (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{voltage, }
+\item[{Servo}]{servo}
+\end{DoxyParamCaption}
+)}\label{classESC_a580839cc20de6686c6d249666a196654}
+Updates the voltage for the \hyperlink{classESC}{E\+S\+C}. 
+\begin{DoxyParams}{Parameters}
+{\em voltage} & Any number, though between 0 and 180 are better. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classESC_abe83b1fc646f0b1bd77d50b215d668d7}{}\index{E\+S\+C@{E\+S\+C}!validate@{validate}}
+\index{validate@{validate}!E\+S\+C@{E\+S\+C}}
+\subsubsection[{validate(const int \&expected\+Position)}]{\setlength{\rightskip}{0pt plus 5cm}bool E\+S\+C\+::validate (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{expected\+Position}
+\end{DoxyParamCaption}
+)}\label{classESC_abe83b1fc646f0b1bd77d50b215d668d7}
+Check if our position is the expected position 
+\begin{DoxyParams}{Parameters}
+{\em expected\+Position} & the position to check against \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
